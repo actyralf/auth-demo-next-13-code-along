@@ -71,16 +71,16 @@ anderer Provider funktioniert nach dem gleichen Schema.
 
 - `useSession`, `signIn` und `signOut` verwenden, um User ein- und auszuloggen
 
-### Schritt 3: Deployment
+### Schritt 3: API-Routen schützen
+
+- In der zu schützenden API-Route das Token mit `getToken()` verifizieren und
+  auslesen.
+
+### Schritt 4: Deployment
 
 - Auf Vercel Umgebungsvariablen mit den gleichen Namen anlegen, hier aber ID und
   Secret der Github Production App eintragen
 - `NEXTAUTH_SECRET` mit einem neu erzeugten Secret belegen
-
-### Schritt 4: API-Routen schützen
-
-- In der zu schützenden API-Route das Token mit `getToken()` verifizieren und
-  auslesen.
 
 ### Schritt 5: Workaround für Vercel Preview Deployment
 
