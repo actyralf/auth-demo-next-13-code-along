@@ -6,7 +6,7 @@ function MyApp({Component, pageProps: {...pageProps}}) {
     <>
       <GlobalStyles />
       <StyledContainer>
-        <h1>🐙 Next Auth Demo 🐙</h1>
+        <h1>🐙 Next Auth Demo 🦫</h1>
         <Component {...pageProps} />
       </StyledContainer>
     </>
