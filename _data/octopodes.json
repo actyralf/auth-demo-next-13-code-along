@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Octy",
+    "email": "ralf@actyvy.st",
+    "color": "#fb5607",
+    "age": 4
+  },
+  {
+    "id": "2",
+    "name": "Bruce",
+    "email": "isewat@gmail.com",
+    "color": "#2ec4b6",
+    "age": 3
+  },
+  {
+    "id": "3",
+    "name": "Noora",
+    "email": "test@example.com",
+    "color": "#7b2cbf",
+    "age": 5
+  }
+]
