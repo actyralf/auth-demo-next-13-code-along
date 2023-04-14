@@ -1,10 +1,10 @@
 import {render, screen} from "@testing-library/react";
-import {OctopusCard} from "../components/OctopusCard";
+import {FishCard} from "../components/FishCard";
 import "@testing-library/jest-dom";
 
-describe("OctopusCard", () => {
+describe("FishCard", () => {
   it("renders a lock icon", () => {
-    render(<OctopusCard locked={true} />);
+    render(<FishCard locked={true} />);
     const heading = screen.getByRole("heading", {
       name: /🔒/i,
     });
