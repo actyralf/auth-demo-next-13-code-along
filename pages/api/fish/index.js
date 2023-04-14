@@ -1,11 +1,11 @@
-import octopodes from "../../../_data/octopodes.json";
+import fishData from "../../../_data/fish.json";
 
 async function handler(req, res) {
   switch (req.method) {
     case "GET":
       return res.status(200).json(
-        octopodes.map(octo => {
-          return {id: octo.id, name: octo.name, email: octo.email};
+        fishData.map(fish => {
+          return {id: fish.id, name: fish.name};
         })
       );
     default:

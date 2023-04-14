@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 // This is a demo component to demonstrate Styled Components integration
 
-export function OctopusCard({octopus, locked = false}) {
+export function FishCard({fish, locked = false}) {
   return (
-    <StyledCard color={octopus?.color}>
+    <StyledCard color={fish?.color}>
       {locked ? (
         <h1>🔒 Unauthorized</h1>
       ) : (
         <>
           {" "}
-          <h1>🔓 My secret octopus profile</h1>
-          <h2>🐙 {octopus?.name}</h2>
-          <p>I am {octopus?.age} years old</p>
+          <h1>🔓 My profile</h1>
+          <h2>🐟 {fish?.name}</h2>
+          <p>{fish.secret}</p>
         </>
       )}
     </StyledCard>

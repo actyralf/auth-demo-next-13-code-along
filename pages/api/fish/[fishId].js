@@ -1,15 +1,15 @@
-import octopodes from "../../../_data/octopodes.json";
+import fishData from "../../../_data/fish.json";
 
 async function handler(req, res) {
-  const {octoId} = req.query;
+  const {fishId} = req.query;
   switch (req.method) {
     case "GET":
       try {
-        const octopus = octopodes.find(octo => octo.id === octoId);
-        if (!octopus) {
-          return res.status(404).json({message: "octopus not found"});
+        const fish = fishData.find(fish => fish.id === fishId);
+        if (!fish) {
+          return res.status(404).json({message: "fish not found"});
         }
-        return res.status(200).json(octopus);
+        return res.status(200).json(fish);
       } catch (error) {
         console.log(error);
         return res.status(500).json({error: "error"});

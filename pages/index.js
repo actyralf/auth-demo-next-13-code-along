@@ -5,25 +5,25 @@ import {StyledContainer} from "../components/StyledContainer";
 import {StyledButton} from "../components/StyledButton";
 
 export default function Home() {
-  const [octopodes, setOctopodes] = useState([]);
+  const [fishData, setFishData] = useState([]);
 
   useEffect(() => {
-    const loadOctopodes = async () => {
+    const loadFishData = async () => {
       try {
-        const response = await fetch("/api/octopodes");
+        const response = await fetch("/api/fish");
         if (!response.ok) {
           throw new Error(
             `Response failed with status code ${response.status}`
           );
         }
         const data = await response.json();
-        setOctopodes(data);
+        setFishData(data);
       } catch (error) {
         console.log(error);
         alert(error.message);
       }
     };
-    loadOctopodes();
+    loadFishData();
   }, []);
 
   return (
@@ -32,12 +32,10 @@ export default function Home() {
         <StyledButton>Login</StyledButton>
       </StyledSection>
       <StyledList>
-        {octopodes.map(octo => {
+        {fishData.map(fish => {
           return (
-            <li key={octo.id}>
-              <StyledLink href={`/octopodes/${octo.id}`}>
-                {octo.name}
-              </StyledLink>
+            <li key={fish.id}>
+              <StyledLink href={`/fish/${fish.id}`}>{fish.name}</StyledLink>
             </li>
           );
         })}
@@ -74,7 +72,7 @@ const StyledList = styled.ul`
   margin: 20px 0;
   padding: 0;
   li:before {
-    content: "🐙";
+    content: "🐟";
     margin-right: 10px;
   }
 `;
