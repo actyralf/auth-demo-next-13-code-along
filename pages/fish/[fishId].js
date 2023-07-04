@@ -26,7 +26,11 @@ export const FishDetails = () => {
     }
   }, [fishId]);
 
-  return <StyledContainer>{fish && <FishCard fish={fish} />}</StyledContainer>;
+  return (
+    <StyledContainer>
+      <FishCard fish={fish} />
+    </StyledContainer>
+  );
 };
 
 export default FishDetails;

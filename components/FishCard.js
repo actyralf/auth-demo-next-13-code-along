@@ -12,7 +12,7 @@ export function FishCard({fish, locked = false}) {
           {" "}
           <h1>🔓 My profile</h1>
           <h2>🐟 {fish?.name}</h2>
-          <p>{fish.secret}</p>
+          <p>{fish?.secret}</p>
         </>
       )}
     </StyledCard>
